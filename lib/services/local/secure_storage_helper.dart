@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import '../models/note.dart';
+import '../../models/note.dart';
 
 class SecureStorageHelper {
   static const _notesKey = 'secure_notes';

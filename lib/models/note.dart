@@ -31,6 +31,14 @@ class Note extends Equatable {
     'body': body,
   };
 
+  Note copyWith({String? id, String? title, String? body}) {
+    return Note(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      body: body ?? this.body,
+    );
+  }
+
   @override
   List<Object?> get props => [id, title, body];
 }

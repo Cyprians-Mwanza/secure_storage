@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cubits/note_cubit.dart';
+import '../cubits/note_cubit.dart';
 import '../models/note.dart';
 
 class AddEditNotePage extends StatefulWidget {
