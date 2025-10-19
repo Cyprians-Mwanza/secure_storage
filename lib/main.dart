@@ -20,8 +20,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Notes App (SQLite + Bloc)',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      title: 'Secure Notes App',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        useMaterial3: true,
+      ),
       home: const NotesPage(),
       debugShowCheckedModeBanner: false,
     );

@@ -26,7 +26,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
   void _saveNote() {
     if (_formKey.currentState!.validate()) {
       final note = Note(
-        id: widget.note?.id,
+        id: widget.note?.id ?? '',
         title: _titleController.text,
         body: _bodyController.text,
       );
@@ -70,7 +70,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
               ElevatedButton(
                 onPressed: _saveNote,
                 child: Text(isEditing ? 'Update Note' : 'Save Note'),
-              )
+              ),
             ],
           ),
         ),

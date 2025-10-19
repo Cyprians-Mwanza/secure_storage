@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubits/note_cubit.dart';
 import '../cubits/note_state.dart';
-import 'NoteDetailPage.dart';
+import 'note_detail_page.dart';
 import 'add_edit_note_page.dart';
 
 class NotesPage extends StatefulWidget {
@@ -16,16 +16,13 @@ class _NotesPageState extends State<NotesPage> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() =>
-        context.read<NoteCubit>().fetchAllNotes());
+    Future.microtask(() => context.read<NoteCubit>().fetchAllNotes());
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Notes'),
-      ),
+      appBar: AppBar(title: const Text('My Secure Notes')),
       body: BlocConsumer<NoteCubit, NoteState>(
         listener: (context, state) {
           if (state is NoteActionSuccess) {
@@ -59,7 +56,7 @@ class _NotesPageState extends State<NotesPage> {
                   trailing: IconButton(
                     icon: const Icon(Icons.delete, color: Colors.red),
                     onPressed: () =>
-                        context.read<NoteCubit>().deleteNoteById(note.id!),
+                        context.read<NoteCubit>().deleteNoteById(note.id),
                   ),
                 );
               },

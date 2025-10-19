@@ -4,7 +4,6 @@ import 'add_edit_note_page.dart';
 
 class NoteDetailPage extends StatelessWidget {
   final Note note;
-
   const NoteDetailPage({super.key, required this.note});
 
   @override
