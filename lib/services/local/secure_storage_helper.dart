@@ -38,6 +38,4 @@ class SecureStorageHelper {
     notes.removeWhere((n) => n.id == id);
     await saveNotes(notes);
   }
-
-  Future<void> clearAll() async => _storage.delete(key: _notesKey);
 }
